@@ -1,0 +1,3 @@
+FROM parity-poa-chain-base:v1.10.2
+
+ENTRYPOINT ["/scripts/run-parity-min.sh"]
