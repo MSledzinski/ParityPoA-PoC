@@ -1,0 +1,23 @@
+[parity]
+chain = "/etc/poa-chain/poa-chain-definition.json"
+base_path = "/mnt/io.parity.ethereum"
+
+[ui]
+interface = "0.0.0.0"
+hosts = ["all"]
+force = true
+
+[websockets]
+interface = "0.0.0.0"
+hosts = ["all"]
+apis = ["all"]
+origins = ["http://127.0.0.1:8180", "http://127.0.0.1:8181", "http://127.0.0.1:8182", "chrome-extension://himekenlppkgeaoeddcliojfddemadig"]
+
+[rpc]
+interface = "0.0.0.0"
+hosts = ["all"]
+cors = ["all"]
+apis = ["all"]
+
+[misc]
+logging = "own_tx,sync=debug"

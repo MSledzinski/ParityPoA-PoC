@@ -1,0 +1,1 @@
+docker build -t parity-poa-chain:v.10.2 .
