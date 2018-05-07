@@ -4,7 +4,7 @@ base_path = "/mnt/io.parity.ethereum"
 
 [account]
 unlock = ["AUTHORITY_ADDRESS"]
-password = ["/run/secrets/authority.AUTHORITY_COMPANY.password"]
+password = ["AUTHORITY_PASSWORD"]
 
 [mining]
 engine_signer = "AUTHORITY_ADDRESS"

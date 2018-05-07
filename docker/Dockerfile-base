@@ -1,6 +1,6 @@
 FROM parity/parity:v1.10.2
 
-RUN apt-get update && apt-get install curl -y
+RUN apt-get update && apt-get install curl -y && apt-get install jq -y
 
 RUN mkdir -p /mnt/io.parity.ethereum
 
@@ -11,6 +11,9 @@ RUN mkdir -p /etc/poa-chain
 COPY ./configs/ /etc/poa-chain/
 
 COPY ./scripts/ /scripts
+
+# Security issue here - as secret shared by all instances, TODO: change that in future
+COPY ./secrets/ /secrets
 
 # For the signer
 RUN mkdir -p ~/.local/share/io.parity.ethereum/signer
