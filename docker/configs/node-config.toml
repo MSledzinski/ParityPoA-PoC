@@ -1,21 +1,16 @@
 [parity]
-chain = "/etc/parityPoA/PoA.json"
+chain = "/etc/poa-chain/poa-chain-definition.json"
 base_path = "/mnt/io.parity.ethereum"
 
 [account]
 unlock = ["AUTHORITY_ADDRESS"]
-password = ["AUTHORITY_PASSWORD"]
+password = ["/secrets/AUTHORITY_COMPANY/password"]
 
 [mining]
 engine_signer = "AUTHORITY_ADDRESS"
 reseal_on_txs = "none"
 usd_per_tx = "0"
 reseal_max_period = 31536000000
-
-[ui]
-interface = "0.0.0.0"
-hosts = ["all"]
-force = true
 
 [websockets]
 interface = "0.0.0.0"

@@ -2,11 +2,6 @@
 chain = "/etc/poa-chain/poa-chain-definition.json"
 base_path = "/mnt/io.parity.ethereum"
 
-[ui]
-interface = "0.0.0.0"
-hosts = ["all"]
-force = true
-
 [websockets]
 interface = "0.0.0.0"
 hosts = ["all"]

@@ -1,0 +1,37 @@
+version: '3'
+
+volumes:
+  node-one-db:
+  node-two-db:
+  node-three-db:
+
+networks: 
+  parity-net:
+
+services:
+  parity-node-one:
+    image: parity-poa-chain-node:v1.10.2
+    environment:
+      - AUTHORITY_COMPANY=one
+    volumes:
+      - node-one-db:/mnt/io.parity.ethereum
+    networks: 
+      - parity-net
+
+  parity-node-two:
+    image: parity-poa-chain-node:v1.10.2
+    environment:
+      - AUTHORITY_COMPANY=two
+    volumes:
+      - node-two-db:/mnt/io.parity.ethereum
+    networks: 
+      - parity-net
+
+  parity-node-three:
+    image: parity-poa-chain-node:v1.10.2
+    environment:
+      - AUTHORITY_COMPANY=three
+    volumes:
+      - node-three-db:/mnt/io.parity.ethereum
+    networks: 
+      - parity-net
