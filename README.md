@@ -1,10 +1,4 @@
-Simple setup for Parity POA chain
-
-Work in progress, TODOs:
- - generate accounts
- - bootstrap many nodes (docker compose)
- - create 'consortium'
- - secrets 
+Simple consortium setup - 3 nodes with Parity nodes, with Proof Of Authority consensus
 
 
 Node bootstrap procedure, based on:
